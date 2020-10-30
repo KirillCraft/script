@@ -10,13 +10,13 @@ local updateIni = inicfg.load(nil, update_path)
 
 update_state = false
 
-local script_vers = 1
-local script_vers_text = "1.00"
+local script_vers = 2
+local script_vers_text = "1.01"
 
 local update_url = "https://raw.githubusercontent.com/KirillCraft/script/main/update.ini"
 local update_path = getWorkingDirectory() .. "/config/koords/update.ini"
 
-local script_url = ""
+local script_url = "https://github.com/KirillCraft/script/raw/main/koords.lua"
 local script_path = thisScript().path
 
 function main()
@@ -54,7 +54,7 @@ function main()
 
     if isKeyJustPressed(vkeys[ini.Settings.Button]) and not sampIsDialogActive() then
 		pX, pY, pZ = getCharCoordinates(PLAYER_PED)
-        sampSendChat("/fs Координаты " .. math.floor(pX) .. " " .. math.floor(pY) .. " ".. math.floor(pZ))
+        sampSendChat("/fs Координаты LOX " .. math.floor(pX) .. " " .. math.floor(pY) .. " ".. math.floor(pZ))
    end
 
 
